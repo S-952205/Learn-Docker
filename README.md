@@ -24,13 +24,14 @@ This repository contains two basic projects:
 
 1.  Navigate into the `fastapi` directory:
     ```bash
-    cd fastapi
+    cd fast-app
     ```
 2.  (Optional) Create and activate a Python virtual environment:
     ```bash
-    python -m venv venv
-    # On Windows
-    .\venv\Scripts\activate
+    python -m venv venv (linux)
+    uv venv (windows)
+    # On Windows 
+    .venv\Scripts\activate
     # On macOS/Linux
     source venv/bin/activate
     ```

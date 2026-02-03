@@ -1,0 +1,32 @@
+# version of docker-compose file format
+version: '3.8'
+
+# services main hum apni containerized apps define karte hain jinko humnay run krna.
+services:
+  fastapi:
+    container_name: fast-app-ct # container name
+    build: # is command say hamari docker image build hogi
+      context: ./fast-app      # context specify karta hai jahan Dockerfile maujood hai
+      dockerfile: Dockerfile   # dockerfile ka naam
+    ports: # port host ka or container ka
+      - "8000:8000"
+    restart: unless-stopped   # tb tk container restart hota rahega jb tk manually stop na kiya jaye
+    networks: # network kee abhi need nhi qynke dono containers apas main communicate nhi krrahay
+      - app-network
+  
+# Same as above for nextjs container
+  nextjs:
+    container_name: nextjs-app-ct
+    build:
+      context: ./next-js
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    networks:
+      - app-network
+
+
+networks:
+  app-network:
+    driver: bridge # bridge driver kay through containers apas main communicate krskty hain

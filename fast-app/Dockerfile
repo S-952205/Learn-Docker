@@ -4,7 +4,7 @@ FROM python:3.13-slim
 
 WORKDIR /app
 
-# ismain first wala dot root directory and second wla working directory
+# ismain first wala dot root directory and second wala working directory
 # ji iss image kay andr directory hogi.
 COPY . .
 
