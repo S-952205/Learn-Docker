@@ -1,0 +1,48 @@
+# Common ignores for almost every project
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+*.md
+README.md   
+
+# Node.js / Frontend projects
+node_modules
+npm-debug.log
+yarn-error.log
+dist
+build
+.next
+coverage
+
+# Python projects
+__pycache__
+*.pyc
+*.pyo
+venv/
+.env
+.pytest_cache
+
+# Logs & temp files
+*.log
+*.tmp
+temp/
+logs/
+
+# Secrets & local config (very important!)
+.env
+.env.local
+.env.development
+.env.production
+secrets/
+config/local.*
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+.DS_Store   # Mac walo ke liye
+
+# Testing & coverage
+htmlcov/
+.coverage

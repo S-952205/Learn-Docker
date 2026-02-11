@@ -22,5 +22,6 @@ RUN npm run build
 # jis port pay chlaygee
 EXPOSE 3000
 
-# command production server run krnay kee
+# command production server run krnay kee Dockerfile ke
+# end pe npm start likha = "Yeh container production mein chalega, build kiya hua app serve karo, no dev features."
 CMD [ "npm", "start" ]
